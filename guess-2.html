@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script>
+function game() {
+	var number = parseInt(Math.random()*100+1); // генериться произвольное число
+	var tryCount1=0; // изначальное значение счетчика
+	var tryCount2=0;
+	alert('Решили, кто будет первым?');
+	alert('Поехали!');
+	while(true){ // повторение цикла до брейка описаного в теле цикла
+
+		tryCount1++;
+		var x = prompt('Введи число:'); // задаем переменную,которой присваивается число введеное пользователем
+		var n = parseInt(x); // преобразование переменной "х" в число "н"
+		  if(x=='q'||x=='Q'){ 
+    	break;        // задаем значение "ку" для выхода изигры
+    	} else if (n==number) {
+			alert('В точку! С '+tryCount1+'-й попытки, мог быть точней. Быть может удасться угадать сразу у второго игрока!');
+		break; // иначе, в случае если числа совпадают, то всё хорошо и игра заканчивается сообщением
+		} else if (n<1||n>100) {
+			alert('Введи число указаного диапазона');
+		} else if(isNaN(n)){ //  иначе, в случае если чисол не относится к ряду чисел
+			alert('Дуришь батенька, жду от тебя число.'); 
+		} else if(n<number) { // иначе, в случае если число меньше пердложеного
+			alert('Маловато будет, попробуй еще раз');
+		} else if(n>number) { // иначе, в случае если число больше пердложеного
+			alert('Многовато будет, попробуй еще раз');
+   		} // else нет, потому что заданы конкретные условия вводного пользователем значения и иных вариантов нет. порядок выполнения уловий не имеет значение, все варианта описаны	
+	}
+		alert('Готов? ');
+		var number = parseInt(Math.random()*100+1); // генериться произвольное число
+	while(true){ // повторение цикла до брейка описаного в теле цикла
+
+		tryCount2++;
+		var x = prompt('Введи число:'); // задаем переменную,которой присваивается число введеное пользователем
+		var n = parseInt(x); // преобразование переменной "х" в число "н"
+		  if(x=='q'||x=='Q'){ 
+    	break;        // задаем значение "ку" для выхода изигры
+    	} else if (n==number) {
+			alert('В точку! С '+tryCount2+'-й попытки. Буду надеяться, что увижу своего героя в будущем!');
+		break; // иначе, в случае если числа совпадают, то всё хорошо и игра заканчивается сообщением
+		} else if (n<1||n>100) {
+			alert('Введи число указаного диапазона');
+		} else if(isNaN(n)){ //  иначе, в случае если чисол не относится к ряду чисел
+			alert('Дуришь батенька, жду от тебя число.'); 
+		} else if(n<number) { // иначе, в случае если число меньше пердложеного
+			alert('Маловато будет, попробуй еще раз');
+		} else if(n>number) { // иначе, в случае если число больше пердложеного
+			alert('Многовато будет, попробуй еще раз');
+   		} // else нет, потому что заданы конкретные условия вводного пользователем значения и иных вариантов нет. порядок выполнения уловий не имеет значение, все варианта описаны
+	}
+		if (tryCount1>tryCount2) {
+			alert('Игрок 2, ты хорош!');
+		} else if (tryCount1<tryCount2){
+			alert('Игрок 1, ты хорош!');
+		}
+}
+
+</script>
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+	<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Интуиция</a></li>
+			<li><a href="guess-2.html">Интуиция мультиплеер</a></li>	
+		</ul>    
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Интуиция мультиплеер</h2>
+	</div>
+	<div id="content">
+
+	<p>Я загадал натуральное число от 1 до 100. Попробуй угадай!<p/>
+	</br>
+	<input type="button" value="Сыграть" onClick="game()" />
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright &copy2016.<a href= "http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> 
+</body>
+</html>
