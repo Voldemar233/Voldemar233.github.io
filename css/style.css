@@ -313,12 +313,14 @@ a.gototop:hover {
 	width: 800px;
 	padding: 20px 0px;
 	color: #fff;
-	text-align: center;
 	position: absolute;
+	text-align: center;
+ 	left: 25%;
  	bottom: 0;
-	width: 100%;
+	width: 50%;
 	height: 20px;
 	
+}
 }
 
 #tooplate_footer a { color: #fff }
